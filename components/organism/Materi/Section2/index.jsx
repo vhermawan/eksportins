@@ -69,15 +69,16 @@ const Section2 = (props) => {
         })
     } else {
       API.get(`/courses/${tabs}?page=${page}`)
-        .then((res) => {
-          setData(res.data.data.courses.data)
-          setLastPage(res.data.data.courses.last_page)
-          setLoaded(true)
-        })
-        .catch((error) => {
-          console.log('err', error)
-          setLoaded(true)
-        })
+      .then((res) => {
+        const allData = data.concat(res.data.data.courses.data)
+        setData(allData)
+        setLastPage(res.data.data.courses.last_page)
+        setLoaded(true)
+      })
+      .catch((error) => {
+        console.log('err', error)
+        setLoaded(true)
+      })
     }
   }, [tabs, page])
 
