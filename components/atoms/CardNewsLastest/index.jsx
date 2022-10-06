@@ -41,7 +41,7 @@ const CardNews = (props) => {
               letterSpacing="wide"
               fontSize="xs"
               textTransform="uppercase"
-              ml="2"
+              mt="2"
             >
               {props.data.category} &bull;{' '}
               {moment(props.data.created_at).format('DD MMMM YYYY')}
