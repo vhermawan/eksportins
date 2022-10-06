@@ -65,7 +65,7 @@ const CardNews = (props) => {
               }}
               onClick={() => props.setSlugNews(props.data.slug)}
             >
-              <EllipsisText text={props.data.title} length={40} />
+              <EllipsisText text={props.data.title} length={35} />
             </Link>
           </Box>
         </Box>
